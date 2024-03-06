@@ -35,4 +35,18 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+    public void testPush(){
+        MyStack<Object> testMyStackPush = new MyStack<Object> ();
+        testMyStackPush.push(new Object());
+        assertNotNull(testMyStackPush);
+    }
+
+    public void testPop(){
+        testPush();
+        MyStack<Object> testMyStackPop = new MyStack<Object> ();
+        testMyStackPop.push(new Object());
+        Object popObj = testMyStackPop.pop();
+        assertNotNull(popObj);
+    }
 }
