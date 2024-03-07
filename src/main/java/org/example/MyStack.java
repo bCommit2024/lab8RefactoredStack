@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.Iterator;
 
-public class MyStack<E> extends ArrayList<E> {
+public class MyStack<E>{
     private ArrayList<E> delegate;
     public MyStack() {
-        this.delegate=this;
+        this.delegate=new ArrayList<E>();
     }
 
     public void push(E e) {
@@ -21,12 +21,12 @@ public class MyStack<E> extends ArrayList<E> {
         return e;
     }
 
-    @Override
+
     public boolean isEmpty(){
         return (delegate.size() == 0);
     }
 
-    @Override
+
     public int size(){
         int sizeDelegate = 0;
         for ( Iterator<E> iterateDelegate = delegate.iterator();iterateDelegate.hasNext();iterateDelegate.next()) {
