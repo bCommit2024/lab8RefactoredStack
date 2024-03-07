@@ -49,4 +49,11 @@ public class AppTest
         Object popObj = testMyStackPop.pop();
         assertNotNull(popObj);
     }
+
+    public void testPushPopInt(){
+        MyStack<Integer> testPushPopInteger = new MyStack<Integer>();
+        testPushPopInteger.push(1);
+        Integer popInt = testPushPopInteger.pop();
+        assertEquals(new Integer(1),popInt);
+    }
 }
