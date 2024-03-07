@@ -56,4 +56,19 @@ public class AppTest
         Integer popInt = testPushPopInteger.pop();
         assertEquals(new Integer(1),popInt);
     }
+
+    public void testIsEmptyDelegate(){
+        MyStack<Integer> testIsEmpty = new MyStack<Integer>();
+        assertTrue(testIsEmpty.isEmpty());
+    }
+
+    public void testSizeDelegate(){
+        testPush();
+        MyStack<Integer> testSize = new MyStack<Integer>();
+        testSize.push(1);
+        assertEquals(1,testSize.size());
+        testSize.push(2);
+        testSize.push(3);
+        assertEquals(3,testSize.size());
+    }
 }
