@@ -60,6 +60,8 @@ public class AppTest
     public void testIsEmptyDelegate(){
         MyStack<Integer> testIsEmpty = new MyStack<Integer>();
         assertTrue(testIsEmpty.isEmpty());
+        testIsEmpty.push(1);
+        assertFalse(testIsEmpty.isEmpty());
     }
 
     public void testSizeDelegate(){

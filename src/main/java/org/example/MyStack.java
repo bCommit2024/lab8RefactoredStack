@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;
-import java.util.Iterator;
+
 
 public class MyStack<E>{
     private ArrayList<E> delegate;
@@ -23,15 +23,11 @@ public class MyStack<E>{
 
 
     public boolean isEmpty(){
-        return (delegate.size() == 0);
+        return delegate.isEmpty();
     }
 
 
     public int size(){
-        int sizeDelegate = 0;
-        for ( Iterator<E> iterateDelegate = delegate.iterator();iterateDelegate.hasNext();iterateDelegate.next()) {
-            sizeDelegate++;
-        }
-        return sizeDelegate;
+        return delegate.size();
     }
 }
